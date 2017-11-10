@@ -1,10 +1,10 @@
 ---
 layout: post
-title: You're up and running!
+title: First Post
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+Hi. This blog is set up to be a collection of discussions on how to use Python for designs of experiments.
+I'm currently deep diving into this subject matter and will be showing how to use Python with design of experiments with a subject matter in chemistry.
+I will occasionally add other projects and musing on to this blog.
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+-Rob
