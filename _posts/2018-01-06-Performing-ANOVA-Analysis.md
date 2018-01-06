@@ -10,7 +10,8 @@ I will save how to set up an experiment and further steps for later blog post.  
 where the experimenter would like to test the differences in plasma power on chemical vapor deposition (CVD) growth rate. Values are made up and completely my own. 
 All analysis will be performed in python using the SciPy package.
 
-###Why ANOVA? 
+### Why ANOVA? 
+
 Analysis of Variance is exactly as its name states. When setting up an experiment, there will be different treatments or levels and then repeats within those treatments. 
 ANOVA looks at how the data varies between different treatments (the between), within those treatments (the measurement error) and the total variation. The averages and 
 sum of squares are computed and then a ratio is computed.  
@@ -19,12 +20,17 @@ The hypothesis of this experiment is that there will be no difference between th
 and variance within those treatments we can use F as our test statistic. This is very useful for investigating if the changes you make in an experiment are statistically 
 significant and gives you and idea how to proceed with your next set of follow up experiments. I will break down these ideas and explain in more depth as we compute this in Python. B
 
-##Experimental Set Up
+### Experimental Set Up
 
-To begin, I created a fictional dataset where I am interested in seeing how my plasma settings affect my CVD growth rate. I set up a completely randomized experiment with 4 treatment
-levels of plasma power (8, 10, 12, 14 Watts) with four replicates. The results of the experiment are shown below:
+To begin, I created a fictional data set where I am interested in seeing how my plasma settings affect my CVD growth rate. I set up a completely randomized experiment with 4 treatment
+levels of plasma power (8, 10, 12, 14 Watts) with four replicates. The data is shown below:
+
+The results of the experiment are shown below:
 
 **INSERT FIGURE - CVD PIVOT
+
+
+$$a^2 + b^2 = c^2$$
 
 
 EDA-BoxPlot
