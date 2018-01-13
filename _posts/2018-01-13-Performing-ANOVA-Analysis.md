@@ -235,7 +235,7 @@ print("p-value is: {:.3f}".format(p))
 
 ![F and P-value in pandas](/images/Performing-ANOVA-Analysis/f_pvalue.png){:class="img-responsive"}
 
-From this we see our p-value is $$\le$$ 0.05 so we can reject our null hypothesis and statistically say that our treatmeant means are different. 
+From this we see our p-value is $$\le$$ 0.05 so we can reject our null hypothesis and statistically say that our treatment means are different. 
 
 So that was really long an involved so lets check our answer using the built-in function.
 
