@@ -3,15 +3,16 @@ layout: post
 title: Performing a 1-way ANOVA experiment in Python
 ---
 
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
 This post will focus on how to perform an exploratory data analysis (EDA) of the experimental data set, and
 perform an analysis of variance (ANOVA) on the data set.
 I will show you how to set up an experiment, build a model, check if it's valid for later blog post.  My background is in thin film growth so this post will focus on a simple experiment
 where the experimenter would like to test the differences in plasma power on chemical vapor deposition (CVD) growth rate. Values are made up and completely my own. 
 All analysis will be performed in python using the SciPy package and written in Jupyter notebooks.
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 
 ### What is ANOVA? 
 
@@ -223,7 +224,7 @@ We calculate our F-Value using:
 
 $$ F_{0} = \frac{MSTR}{MSE} $$
 
-We set our $$\alpha = 0.05$$ and can reject our $$H_{0}$$ if our $$ p \le 0.05 $$. We can compute our p from our F-Value using python.
+We set our $$\alpha = 0.05$$ and can reject our $$H_{0}$$ if our $$ p \le 0.05 $$. We can compute our $$p from our F-Value using python.
 
 {% highlight python %}
 F = MSTR/MSE #F-value
