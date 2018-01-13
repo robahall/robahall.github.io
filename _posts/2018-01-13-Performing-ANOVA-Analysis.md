@@ -223,7 +223,7 @@ We calculate our F-Value using:
 
 $$ F_{0} = \frac{MSTR}{MSE} $$
 
-To reject our null hypothesis our $$ p \le 0.05 $$. We can compute our p from our F-Value using python.
+We set our $$\alpha = 0.05$$ and can reject our $$H_{0}$$ if our $$ p \le 0.05 $$. We can compute our p from our F-Value using python.
 
 {% highlight python %}
 F = MSTR/MSE #F-value
