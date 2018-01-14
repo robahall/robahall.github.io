@@ -256,7 +256,7 @@ We can now report that our power setting greatly alters the average growth rate 
 
 # Conclusions
 
-And so that's it! We have successfully computed our one-way ANOVA using python and then compared our values to the built in functions. 
+And that's it! We have successfully computed our one-way ANOVA using python and then compared our values to the built in functions. 
 So what do we do next and how is this useful for CVD or materials science? Well we can now develop a model and check our assumptions. 
 
 
