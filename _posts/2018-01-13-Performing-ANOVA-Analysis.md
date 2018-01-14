@@ -7,7 +7,7 @@ This post will focus on how to perform an exploratory data analysis (EDA) of the
 perform an analysis of variance (ANOVA) on the data set.
 I will show you how to set up an experiment, build a model, check if it's valid for later blog post.  My background is in thin film growth so this post will focus on a simple experiment
 where the experimenter would like to test the differences in plasma power on chemical vapor deposition (CVD) growth rate. Values are made up and completely my own. 
-All analysis will be performed in python using the SciPy package and written in Jupyter notebooks.
+All analysis will be performed in Python using the SciPy package and written in Jupyter notebooks.
 
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
