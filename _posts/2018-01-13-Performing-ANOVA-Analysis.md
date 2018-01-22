@@ -15,15 +15,15 @@ All analysis will be performed in Python using the SciPy package and written in 
 
 # Outline
 
-*What is ANOVA
-*Experimental Set-Up
-*Exploratory Data Analysis
-*Setting up data set in Python
-*Degrees of Freedom
-*Sum of Squares
-*Mean Square Values
-*F-Value and Testing our Hypothesis
-*Conclusions
+* What is ANOVA
+* Experimental Set-Up
+* Exploratory Data Analysis
+* Setting up data set in Python
+* Degrees of Freedom
+* Sum of Squares
+* Mean Square Values
+* F-Value and Testing our Hypothesis
+* Conclusions
 
 # What is ANOVA? 
 
