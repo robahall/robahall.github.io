@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Performing a 1-way ANOVA experiment in Python
+title: Performing a 1-way ANOVA experiment in Python - Part I
 ---
 
-This post will focus on how to perform an exploratory data analysis (EDA) of the experimental data set, and
-perform an analysis of variance (ANOVA) on the data set.
-I will show you how to set up an experiment, build a model, check if it's valid for later blog post.  My background is in thin film growth so this post will focus on a simple experiment
-where the experimenter would like to test the differences in plasma power on chemical vapor deposition (CVD) growth rate. Values are made up and completely my own. 
+This post is the first of two posts to focus on how to perform an exploratory data analysis (EDA) of the experimental data set, create a hypothesis and
+perform an analysis of variance (ANOVA) on the hypothesis. The second part will focus on how to build a model and determine if the model is valid.  My background is in nanotechnology so this post will focus on a simple experiment
+where the experimenter would like to test the differences in plasma power on deposition of a thin film on the surface of a silicon wafer. Values are made up and completely my own. 
 All analysis will be performed in Python using the SciPy package and written in Jupyter notebooks.
 
 <script type="text/javascript" async
@@ -14,9 +13,21 @@ All analysis will be performed in Python using the SciPy package and written in 
 </script>
 
 
-### What is ANOVA? 
+# Outline
 
-Analysis of Variance is exactly as its name states. The statistical test is called a one-way-ANOVA due to only one factor. 
+*What is ANOVA
+*Experimental Set-Up
+*Exploratory Data Analysis
+*Setting up data set in Python
+*Degrees of Freedom
+*Sum of Squares
+*Mean Square Values
+*F-Value and Testing our Hypothesis
+*Conclusions
+
+# What is ANOVA? 
+
+Analysis of Variance is analyzing the variance between different treatments. The statistical test is called a one-way-ANOVA due to only one factor. 
 When setting up an experiment, there will be different treatments or levels within that factor and then repeats within those treatments. 
 ANOVA looks at how the data varies between different treatments (the between), within those treatments (the random error) and the total variation. The averages and 
 sum of squares are calculated and then a ratio of the variances is computed. 
@@ -30,10 +41,19 @@ $$ y_{i,j} = \mu + \tau_{i} + \epsilon_{ij} \space\space \lbrace\begin{array}{ll
 where $$y_{i,j}$$ is the $$ ij^{th} $$ observation, $$ \mu_i $$ is the mean of the $$i$$th treatment, $$\tau_{i}$$ is the treatment effect and $$\epsilon_{ij}$$ is the random error component which captures all the 
 varability within the experiment. The random error includes, measurement error (measurement tool), differences between samples (e.g. surface slightly different), and any environmental errors. The $$i$$ classifies the 
 treatment number, and the $$j$$ represents the sample within the treatment. The importance of this model is that it allows us to "predict" or explain the the individual components of our value, $$ y_{ij} $$. 
+
+Formally our null hypothesis is:
+
+$$H_{0}: \tau_{1} = \tau_{2} = \tau_{3} = \tau_{4} = 0$$
+
+and our alternative hypothesis is:
+
+$$H_{1}: \tau_{i} \ne 0$$
+
  
 I will break down these ideas and explain in more depth as we compute this in Python. 
 
-### Experimental Set Up
+# Experimental Set Up
 
 To begin, I created a fictional data set (as a .csv) where I am interested in seeing how my plasma settings affect my CVD growth rate. I set up a completely randomized experiment with 1 factor (plasma power) 
 and 4 treatment levels of plasma power (8, 10, 12, 14 Watts) with four replicates. The first step is to load the fictional data set into pandas and view the data. 
@@ -188,7 +208,7 @@ print("Total Sum of Squares is: {:.2f}".format(SST))
 
 ![Sum of Squares in pandas](/images/Performing-ANOVA-Analysis/sum_of_squares.png){:class="img-responsive"}
 
-One immediate effect I see from computing the sum of squares is that the SSTR is much larger than the sum of squares within and tell us the treatments have a much larger effect than the within samples error has on the result.
+One immediate effect visible from computing the sum of squares is that the SSTR is much larger than the sum of squares within and tell us the treatments have a much larger effect than the within samples error has on the result.
 
 # Mean Square
 
@@ -208,7 +228,7 @@ print("Mean squares within treatments is: {:.2f}".format(MSE))
 
 ![Mean Squares in pandas](/images/Performing-ANOVA-Analysis/Mean_Squares.png){:class="img-responsive"}
 
-# F-Value
+# F-Value and Testing our Hypothesis
 
 We have finally come to the F-Value. I will leave the theory behind it for another post, but this is where we can finally test our hypothesis.
 
@@ -256,8 +276,11 @@ We can now report that our power setting greatly alters the average growth rate 
 
 # Conclusions
 
-And that's it! We have successfully computed our one-way ANOVA using python and then compared our values to the built in functions. 
-So what do we do next and how is this useful for CVD or materials science? Well we can now develop a model and check our assumptions. 
+After performing the ANOVA, we can conclude that our different plasma levels are statistically different due to rejecting the null hypothesis. We could initially visualize this from our box plots,
+and see the sum of squares for the treatments were much greater than within treatments. We tested this by setting up a hypothesis that there was no difference and then using an using an F-test to test the hypothesis.
+Since the p-value for our F-test was much less than 0.05 we could conclude that there was a significant difference between treatments and could reject our null hypothesis. 
+
+So what do we do next and how is this useful for CVD or materials science? Well we can now develop a model and check our assumptions which will be discussed in Part II.  
 
 
 

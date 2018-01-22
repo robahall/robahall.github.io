@@ -1,6 +1,7 @@
 ---
 layout: post
 title: First Post
+
 ---
 
 Hi. This blog is set up to be a collection of discussions on how to use Python for designs of experiments.
