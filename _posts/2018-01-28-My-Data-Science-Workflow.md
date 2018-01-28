@@ -18,12 +18,12 @@ More obscure data requires good old google searching.
 
 3. Download the data. Data comes in many forms such as .csv, .json so you need to download it to your directory where you will be performing the analysis.If you are lucky, sometimes the site has an API you can query the data with and pull it straight into python.
 
-4. Load the data into your program. I use the SciPy stack for Python and use Jupyter Notebooks for the analysis. Pandas loads data into a DataFrame whicch is essentially an Excel sheet where you interact with the data through python code.The easiest way to get the full stack is to download [Anaconda]([https://www.anaconda.com/download/]). 
+4. Load the data into your program. I use the SciPy stack for Python and use Jupyter Notebooks for the analysis. Pandas loads data into a DataFrame which is essentially an Excel sheet where you interact with the data through python code.The easiest way to get the full stack is to download [Anaconda](https://www.anaconda.com/download/). 
 
 5. Clean the data. Your first steps will be to see if the data has been cleaned. If it hasn't you will have to clean it yourself. There is popular saying out there that says 80% of a data scientist's job is cleaning data and there is validity to that statement. 
-You need to ensure each column of data is the same data type, confirm data ranges are correct, find NaN's or NULLs, and check for anomalies. Some these are simple where you can scan a column for a data type, while others are discovered by using statistical methods such as means, maxs, or mins.  
+You need to ensure each column of data is the same data type, confirm data ranges are correct, find NaN's or NULLs, and check for anomalies. Some these are simple where you can scan a column for a data type, while others are discovered by using statistical methods such as means, maxs, or mins. A great helper function I use is [Pandas Profiling](https://github.com/pandas-profiling/pandas-profiling)
 
-6. Perform Exploratory Data Analysis. This step overlaps with data cleaning. Your goal is maximize your insight into the dataset. My go to source is the [NIST Engineering Statistics Handbook](http://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm) for how to perform. I use [seaborn]([https://seaborn.pydata.org/]) for visualizations. 
+6. Perform Exploratory Data Analysis. This step overlaps with data cleaning. Your goal is maximize your insight into the dataset. My go to source is the [NIST Engineering Statistics Handbook](http://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm) for how to perform. I use [seaborn](https://seaborn.pydata.org/) for visualizations. 
 
     6.1 Univariate distributions - histograms
     
