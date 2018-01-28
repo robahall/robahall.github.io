@@ -6,6 +6,10 @@ title: My Data Science Workflow
 
 One of my friends asked me what my data science workflow is when I start a new data project. I'll breakdown my workflow and tools here:
 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 1. Ask an interesting question. Typically I will see something and ask "why does that happen?"
 
 2. Find data that is relevant. This is one of the more difficult aspects to a data project. I will search for datasets at sites like
