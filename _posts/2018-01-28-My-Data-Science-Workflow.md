@@ -45,6 +45,6 @@ You need to ensure each column of data is the same data type, confirm data range
     9.3. After a first pass of the model, you need to check for which features have the largest impact. In a linear model these are your $$\beta$$ parameters. Large values indicate more effect on the model. Smaller values could potentially be dropped. This helps reduce the complexity of your model and decrease the processing power needed.
     Additionally, it helps reduce the chance of overfitting the data. At this point you need to balance the model bias and variance. 
 
-9.4. If you have a model now that fits your CV sets well, test it on the test set. If it tests well (typically >80% accuracy), congrats you have produced a good model. Be careful if you have a model with greater than 95% accuracy. THis could be a sign your model is over-fitting the data.
+    9.4. If you have a model now that fits your CV sets well, test it on the test set. If it tests well (typically >80% accuracy), congrats you have produced a good model. Be careful if you have a model with greater than 95% accuracy. THis could be a sign your model is over-fitting the data.
 
-10.Report your findings! 
+10. Report your findings! 
