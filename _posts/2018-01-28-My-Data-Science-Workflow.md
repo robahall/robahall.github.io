@@ -22,15 +22,17 @@ You need to ensure each column of data is the same data type, confirm data range
 6. Perform Exploratory Data Analysis. This step overlaps with data cleaning. Your goal is maximize your insight into the dataset. My go to source is the [NIST Engineering Statistics Handbook]([http://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm]) for how to perform. I use [seaborn]([https://seaborn.pydata.org/]) for visualizations. 
 
     6.1 Univariate distributions - histograms
+    
     6.2 Multivariate - Scatterplots or pair plots
+    
     6.3 Categorical data - use strip plots, box plots or bar plots
 
 7. Ask your self "Will the data allow me to answer my question?". If no, then repeat from 2. A lot of times you will be pulling from multiple data sources and have to merge the data in step 5.
 
 8. If it is comparing one mean to another, then proceed with 8.1. If you are working with a more complicated dataset or would like to model it, proceed to 9.
 
-8.1. If I'm comparing one data set to another where they differ by one level to see if there is a "statistically significant difference" or rejecting the null then I will typically t-test it. If it is multiple treatments or levels (where I have changed one varaible to test the output) then I like to use an ANOVA. 
-I use [StatModels]([http://www.statsmodels.org/stable/index.html]) for simple statistics and modeling.
+    8.1. If I'm comparing one data set to another where they differ by one level to see if there is a "statistically significant difference" or rejecting the null then I will typically t-test it. If it is multiple treatments or levels (where I have changed one varaible to test the output) then I like to use an ANOVA. 
+    I use [StatModels]([http://www.statsmodels.org/stable/index.html]) for simple statistics and modeling.
 
 9. If I'm trying to model the data to predict an outcome, I move to [scikit-learn]([http://scikit-learn.org/stable/]). 
 
