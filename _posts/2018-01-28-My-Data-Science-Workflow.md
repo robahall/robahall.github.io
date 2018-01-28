@@ -29,20 +29,19 @@ You need to ensure each column of data is the same data type, confirm data range
 
 8. If it is comparing one mean to another, then proceed with 8.1. If you are working with a more complicated dataset or would like to model it, proceed to 9.
 
-8.1 If I'm comparing one data set to another where they differ by one level to see if there is a "statistically significant difference" or rejecting the null then I will typically t-test it. If it is multiple treatments or levels (where I have changed one varaible to test the output) then I like to use an ANOVA. 
+8.1. If I'm comparing one data set to another where they differ by one level to see if there is a "statistically significant difference" or rejecting the null then I will typically t-test it. If it is multiple treatments or levels (where I have changed one varaible to test the output) then I like to use an ANOVA. 
 I use [StatModels]([http://www.statsmodels.org/stable/index.html]) for simple statistics and modeling.
 
 9. If I'm trying to model the data to predict an outcome, I move to [scikit-learn]([http://scikit-learn.org/stable/]). 
 
-9.1 Preprocess that data! At this stage I break the data up into a cross validation (CV) sets and a test set. This is vital to prevent over-fitting of your model. I use [k-folds Cross Validation]([http://scikit-learn.org/stable/modules/cross_validation.html]) from scikit-learn to perform this function. 
+    9.1. Preprocess that data! At this stage I break the data up into a cross validation (CV) sets and a test set. This is vital to prevent over-fitting of your model. I use [k-folds Cross Validation]([http://scikit-learn.org/stable/modules/cross_validation.html]) from scikit-learn to perform this function. 
 
-9.2 Time to figure out which model to use. I almost always check out this flow chart from scikit-learn to help decided which model to use:
+    9.2. Time to figure out which model to use. I almost always check out this flow chart from scikit-learn to help decided which model to use:
+    [Flowchart of Models from scikit-learn](/images/My-Data-Science-Workflow/WhichModeltoUse.png)
 
-[Flowchart of Models from scikit-learn](/images/My-Data-Science-Workflow/WhichModeltoUse.png)
+    9.3. After a first pass of the model, you need to check for which features have the largest impact. In a linear model these are your $$\beta$$ parameters. Large values indicate more effect on the model. Smaller values could potentially be dropped. This helps reduce the complexity of your model and decrease the processing power needed.
+    Additionally, it helps reduce the chance of overfitting the data. At this point you need to balance the model bias and variance. 
 
-9.3 After a first pass of the model, you need to check for which features have the largest impact. In a linear model these are your $$\beta$$ parameters. Large values indicate more effect on the model. Smaller values could potentially be dropped. This helps reduce the complexity of your model and decrease the processing power needed.
-Additionally, it helps reduce the chance of overfitting the data. At this point you need to balance the model bias and variance. 
-
-9.4 If you have a model now that fits your CV sets well, test it on the test set. If it tests well (typically >80% accuracy), congrats you have produced a good model. Be careful if you have a model with greater than 95% accuracy. THis could be a sign your model is over-fitting the data.
+9.4. If you have a model now that fits your CV sets well, test it on the test set. If it tests well (typically >80% accuracy), congrats you have produced a good model. Be careful if you have a model with greater than 95% accuracy. THis could be a sign your model is over-fitting the data.
 
 10. Report your findings! 
