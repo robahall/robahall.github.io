@@ -35,7 +35,7 @@ You need to ensure each column of data is the same data type, confirm data range
 
 8. If it is comparing one mean to another, then proceed with 8.1. If you are working with a more complicated data set or would like to model it, proceed to 9.
 
-    8.1. If I'm comparing one data set to another where they differ by one level to see if there is a "statistically significant difference" or rejecting the null then I will typically t-test it. If it is multiple treatments or levels (where I have changed one varaible to test the output) then I like to use an ANOVA. 
+    8.1. If I'm comparing one data set to another where they differ by one level to see if there is a "statistically significant difference" or rejecting the null then I will typically t-test it. If it is multiple treatments or levels (where I have changed one variable to test the output) then I like to use an ANOVA. 
     I use [StatModels](http://www.statsmodels.org/stable/index.html) for simple statistics and modeling.
 
 9. If I'm trying to model the data to predict an outcome, I move to [scikit-learn](http://scikit-learn.org/stable/). 
