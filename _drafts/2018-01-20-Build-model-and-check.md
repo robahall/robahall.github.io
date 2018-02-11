@@ -10,3 +10,17 @@ Our next steps are to build a model and then check the model
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
+
+Outline: Computing Residuals and checking for outliers
+
+Create Model.
+
+Compute Residuals.
+
+Check for Outliers.
+
+
+
+
+
