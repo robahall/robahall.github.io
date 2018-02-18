@@ -24,9 +24,11 @@ The skeleton for this model is:
 
 $$ y_{i,j} = \mu + \tau_{i} + \epsilon_{ij} \space\space \lbrace\begin{array}{ll} i = 1, 2 ... a \\ j = 1 ,2 ... n \end{array} $$
 
-From my previous post we had created a dataframe with our 
+and we can group $$ \mu_{i}= \mu + \tau_{i} $$ and this essentially tells us that $\mu_{i} is a sum of $$\mu$$ and $$\tau_{i}$$.
 
-
+From my previous post we had created a dataframe, yi_avg, which was the average under the i-th treatment. It turns out that this average is also a good estimate for our point estimator, $$ \hat{mu}_{i}$$. 
+Tip: Anything you see with a hat over a variable means that it is an estimator.
+We can now create our model:
 
 {% highlight python %}
 ## Point estimator of mu_i is mu_hat plus ti hat which is yi_bar
