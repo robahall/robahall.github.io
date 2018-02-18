@@ -37,3 +37,13 @@ mu_hat = yi_avg
 mu_hat
 {% endhighlight %}
 
+Great! Now we have a simple model to predict our outcome variable, y (CVD growth rate). 
+
+# Computing Residuals
+
+From here we need to check the assumptions we originally made.  We do that by:
+
+*Checking normality against residuals
+*Plot versus time sequence
+*Plot versus fitted values.
+*Check for outliers
