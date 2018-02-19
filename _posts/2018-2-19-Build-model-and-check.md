@@ -13,9 +13,10 @@ Our next steps are to build a model and then check our model and assumptions we 
 
 # Outline
 
-* Create Model
-* Computing Residuals
-* Checking for Outliers
+* Model the data
+* Computing residuals
+* Testing assumptions with residuals
+* Check for outliers
 
 # Model the data
 
@@ -41,7 +42,7 @@ y_hat
 
 Great! Now we have a simple model to predict our outcome variable, y (CVD growth rate). 
 
-# Computing Residuals
+# Computing residuals
 
 To calculate our residuals, we need to subtract our model from our actual values. 
 
@@ -62,7 +63,7 @@ cvd_pivot_residuals_melted
 ![Check out residuals](/images/Build-model-and-check/cvdPivotResidualsMelted.png){:class="img-responsive"}
 
 
-# Testing assumptions with Residuals
+# Testing assumptions with residuals
 
 From here we need to check the assumptions we originally made.  We do that by:
 
