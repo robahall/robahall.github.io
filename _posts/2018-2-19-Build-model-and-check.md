@@ -25,9 +25,9 @@ The skeleton for this model is:
 
 $$ y_{i,j} = \mu + \tau_{i} + \epsilon_{ij} \space\space \lbrace\begin{array}{ll} i = 1, 2 ... a \\ j = 1 ,2 ... n \end{array} $$
 
-We can simplify $$\mu$$ and $$\tau_{i}$$ by taking $$ $$ \mu_{i}= \mu + \tau_{i} $$
+We can simplify $$\mu$$ and $$\tau_{i}$$ by taking $$ \mu_{i}= \mu + \tau_{i} $$
 
-From my previous post we had created a dataframe, yi_avg, which was the average under the i-th treatment. It turns out that this average is also a good estimate for our point estimator, $$ \hat{\mu}_{i}$$. 
+From my previous post we had created a dataframe, yi_avg, which was the average under the i-th treatment. It turns out that this average is also a good estimate for our point estimator, $$ \hat{y}_{i}$$. 
 Tip: Anything you see with a hat over a variable means that it is an estimator.
 We can now create our model:
 
