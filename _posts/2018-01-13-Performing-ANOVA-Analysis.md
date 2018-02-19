@@ -226,7 +226,7 @@ print("Mean squares between treatments is: {:.2f}".format(MSTR))
 print("Mean squares within treatments is: {:.2f}".format(MSE))
 {% endhighlight %}
 
-![Mean Squares in pandas](/images/Performing-ANOVA-Analysis/Mean_Squares.png){:class="img-responsive"}
+![Mean Squares in pandas](/images/Performing-ANOVA-Analysis/meanSquares.png){:class="img-responsive"}
 
 # F-Value and Testing our Hypothesis
 
