@@ -27,13 +27,11 @@ $$ y_{i,j} = \mu + \tau_{i} + \epsilon_{ij} \space\space \lbrace\begin{array}{ll
 
 We can simplify $$\mu$$ and $$\tau_{i}$$ by taking $$ $$ \mu_{i}= \mu + \tau_{i} $$
 
-From my previous post we had created a dataframe, yi_avg, which was the average under the i-th treatment. It turns out that this average is also a good estimate for our point estimator, $$ \hat{mu}_{i}$$. 
+From my previous post we had created a dataframe, yi_avg, which was the average under the i-th treatment. It turns out that this average is also a good estimate for our point estimator, $$ \hat{\mu}_{i}$$. 
 Tip: Anything you see with a hat over a variable means that it is an estimator.
 We can now create our model:
 
 {% highlight python %}
-## Point estimator of mu_i is mu_hat plus ti hat which is yi_bar
-## Mu hat is also y hat
 y_hat = yi_avg 
 y_hat
 {% endhighlight %}
