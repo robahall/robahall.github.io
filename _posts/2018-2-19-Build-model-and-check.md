@@ -36,7 +36,7 @@ y_hat = yi_avg
 y_hat
 {% endhighlight %}
 
-![Check out y_hat](/images/Build-model-and-check/createPountEstimatorMuHat.png){:class="img-responsive"}
+![Check out y_hat](/images/Build-model-and-check/createPointEstimatorMuHat.png){:class="img-responsive"}
 
 Great! Now we have a simple model to predict our outcome variable, y (CVD growth rate). 
 
