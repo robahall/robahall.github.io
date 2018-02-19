@@ -65,10 +65,10 @@ cvd_pivot_residuals_melted
 
 From here we need to check the assumptions we originally made.  We do that by:
 
-* Checking normality against residuals
-* Plot versus time sequence
-* Plot versus fitted values.
-* Check for outliers
+* Checking normality against residuals,
+* Plot versus time sequence,
+* Plot versus fitted values, and
+* Checking for outliers
 
 One of the first assumptions we made when running an ANOVA was that the data was approximately normal. We typically check this with a histogram but because we have small sample small small fluctuations in our data causes large shape changes to our histogram. 
 Instead we check our residuals with a normal probability plot. What we are interested in from our probability plot is whether our residuals are approximately normal. 
