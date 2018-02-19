@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Performing a 1-way ANOVA experiment in Python - Part I
+title: Part I Simple ANOVA - Performing a 1-way ANOVA experiment in Python
 ---
 
 This post is the first of two posts to focus on how to perform an exploratory data analysis (EDA) of the experimental data set, create a hypothesis and
