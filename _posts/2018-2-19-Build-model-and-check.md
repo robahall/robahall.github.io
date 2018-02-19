@@ -25,7 +25,7 @@ The skeleton for this model is:
 
 $$ y_{i,j} = \mu + \tau_{i} + \epsilon_{ij} \space\space \lbrace\begin{array}{ll} i = 1, 2 ... a \\ j = 1 ,2 ... n \end{array} $$
 
-and we can group $$ \mu_{i}= \mu + \tau_{i} $$ and this tells us that $$\mu_{i}$$ is the sum of $$\mu$$ and $$\tau_{i}$$.
+We can simplify $$\mu$$ and $$\tau_{i}$$ by taking $$ $$ \mu_{i}= \mu + \tau_{i} $$
 
 From my previous post we had created a dataframe, yi_avg, which was the average under the i-th treatment. It turns out that this average is also a good estimate for our point estimator, $$ \hat{mu}_{i}$$. 
 Tip: Anything you see with a hat over a variable means that it is an estimator.
