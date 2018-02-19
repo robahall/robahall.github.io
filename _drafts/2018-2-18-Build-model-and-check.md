@@ -33,17 +33,44 @@ We can now create our model:
 {% highlight python %}
 ## Point estimator of mu_i is mu_hat plus ti hat which is yi_bar
 ## Mu hat is also y hat
-mu_hat = yi_avg
-mu_hat
+y_hat = yi_avg 
+y_hat
 {% endhighlight %}
+
+![Check out y_hat](/images/Build-model-and-check/createPountEstimatorMuHat.png){:class="img-responsive"}
 
 Great! Now we have a simple model to predict our outcome variable, y (CVD growth rate). 
 
 # Computing Residuals
 
+To calculate our residuals, we need to subtract our model from our actual values. 
+
+{% highlight python %}
+## Point estimator of mu_i is mu_hat plus ti hat which is yi_bar
+## Mu hat is also y hat
+cvd_pivot_residuals = cvd_pivot.sub(y_hat, axis = 1)
+cvd_pivot_residuals
+{% endhighlight %}
+
+![Check out residuals](/images/Build-model-and-check/cvdPivotResiduals.png){:class="img-responsive"}
+
+And melt them back into a singular column for analysis with Python.
+
+{% highlight python %}
+## Point estimator of mu_i is mu_hat plus ti hat which is yi_bar
+## Mu hat is also y hat
+cvd_pivot_residuals_melted = cvd_pivot_residuals.melt()
+cvd_pivot_residuals_melted
+{% endhighlight %}
+
+![Check out residuals](/images/Build-model-and-check/cvdPivotResidualsMelted.png){:class="img-responsive"}
+
+
+# Testing assumptions with Residuals
+
 From here we need to check the assumptions we originally made.  We do that by:
 
-*Checking normality against residuals
-*Plot versus time sequence
-*Plot versus fitted values.
-*Check for outliers
+* Checking normality against residuals
+* Plot versus time sequence
+* Plot versus fitted values.
+* Check for outliers
