@@ -38,7 +38,7 @@ y_hat
 
 ![Check out y_hat](/images/Build-model-and-check/createPointEstimatorMuHat.png){:class="img-responsive"}
 
-Great! Now we have a simple model to predict our outcome variable, y (CVD growth rate). 
+Great! Now we have a simple model using Power to predict our outcome variable, y (CVD growth rate). 
 
 # Computing residuals
 
@@ -70,7 +70,7 @@ From here we need to check the assumptions we originally made.  We do that by:
 * Plot versus fitted values, and
 * Checking for outliers
 
-One of the first assumptions we made when running an ANOVA was that the data was approximately normal. We typically check this with a histogram but because we have small sample small small fluctuations in our data causes large shape changes to our histogram. 
+One of the first assumptions we made when running an ANOVA was that the data was approximately normal. We typically check this with a histogram but because we have a small sample set, small fluctuations in our data causes large shape changes to our histogram. 
 Instead we check our residuals with a normal probability plot. What we are interested in from our probability plot is whether our residuals are approximately normal. 
 
 {% highlight python %}
