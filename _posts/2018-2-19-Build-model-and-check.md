@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Post
+title: Part II Simple ANOVA - Build our model and check our assumptions 
 
 ---
 
