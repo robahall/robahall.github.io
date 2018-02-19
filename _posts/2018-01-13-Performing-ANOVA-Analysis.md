@@ -269,7 +269,7 @@ print("F-value is: {:.2f}".format(f_val))
 print("p-value is: {:.3f}".format(p_val))
 {% endhighlight %}
 
-![F and P-value in SciPy](/images/Performing-ANOVA-Analysis/built_in.png){:class="img-responsive"}
+![F and P-value in SciPy](/images/Performing-ANOVA-Analysis/Built_in.png){:class="img-responsive"}
 
 We can now report that our power setting greatly alters the average growth rate of our CVD film. We would report this as $$ F(3,12) = 314.10 \space p < 0.001 $$. 
 
