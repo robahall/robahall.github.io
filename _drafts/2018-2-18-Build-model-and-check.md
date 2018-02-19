@@ -46,8 +46,6 @@ Great! Now we have a simple model to predict our outcome variable, y (CVD growth
 To calculate our residuals, we need to subtract our model from our actual values. 
 
 {% highlight python %}
-## Point estimator of mu_i is mu_hat plus ti hat which is yi_bar
-## Mu hat is also y hat
 cvd_pivot_residuals = cvd_pivot.sub(y_hat, axis = 1)
 cvd_pivot_residuals
 {% endhighlight %}
@@ -57,8 +55,6 @@ cvd_pivot_residuals
 And melt them back into a singular column for analysis with Python.
 
 {% highlight python %}
-## Point estimator of mu_i is mu_hat plus ti hat which is yi_bar
-## Mu hat is also y hat
 cvd_pivot_residuals_melted = cvd_pivot_residuals.melt()
 cvd_pivot_residuals_melted
 {% endhighlight %}
@@ -74,3 +70,17 @@ From here we need to check the assumptions we originally made.  We do that by:
 * Plot versus time sequence
 * Plot versus fitted values.
 * Check for outliers
+
+One of the first assumptions we made when running an ANOVA was that the data was approximately normal. We typically check this with a histogram but because we have small sample small small fluctuations in our data causes large shape changes to our histogram. 
+Instead we check our residuals with a normal probability plot. What we are interested in from our probability plot is whether our residuals are approximately normal. 
+
+{% highlight python %}
+stats.probplot(cvd_pivot_residuals_melted['value'], plot=plt)
+{% endhighlight %}
+
+![Check out residuals](/images/Build-model-and-check/probPlotResiduals.png){:class="img-responsive"}
+
+The important thing to look for is if the data between -1 and +1 quantiles are approximately linear. From the probability plot we see that our data is approximately normal with some deviations on the tails. 
+
+At this point we would check to see if there is correlation between samples run in time sequence. If there was, then our assumption of independance between runs is false. Unfortunately since the data is generated within Python we will not be calculating it here. 
+
