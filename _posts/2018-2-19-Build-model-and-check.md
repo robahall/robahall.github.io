@@ -4,8 +4,8 @@ title: Part II Simple ANOVA - Build our model and check our assumptions
 
 ---
 
-We left off from on the [last post](http://www.robahall.com/Performing-ANOVA-Analysis/) after performing an ANOVA statistical test and showing that these is a difference between treatments. 
-Our next steps are to build a model and then check our model and assumption we previously made are correct. 
+We left off from the [last post](http://www.robahall.com/Performing-ANOVA-Analysis/) after performing an ANOVA statistical test and showing that there is a difference between treatments. 
+Our next steps are to build a model and then check our model and assumptions we had previously made are correct. 
 
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
