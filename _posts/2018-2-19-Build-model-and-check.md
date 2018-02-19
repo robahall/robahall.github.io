@@ -80,9 +80,9 @@ stats.probplot(cvd_pivot_residuals_melted['value'], plot=plt)
 
 ![Check out probability plot](/images/Build-model-and-check/probPlotResiduals.png){:class="img-responsive"}
 
-The important thing to look for is if the data between -1 and +1 quantiles are approximately linear. From the probability plot we see that our data is approximately normal with some deviations on the tails. 
+The most important thing here is if the data between the -1 and +1 quantiles are approximately linear. From the probability plot we see that our data is approximately linear with some deviations on the tails. 
 
-At this point we would check to see if there is correlation between samples run in time sequence. If there was, then our assumption of independence between runs is false. Unfortunately since the data is generated within Python we will not be calculating it here. 
+At this point we would check to see if there is correlation between samples run in time sequence. If there was, then our assumption of independence between runs is false. Unfortunately since I created this data set, we will not be calculating it here. 
 
 The next check is to make sure that there is consistent variance between treatments. An unequal variance can cause deviations in our F-Test but will mainly affect experiments with unequal treatment sizes or a different type of model. 
 
@@ -105,17 +105,17 @@ plt.show()
 
 ![Plot predicted vs. resiudals](/images/Build-model-and-check/predictedGrowthVsResiduals.png){:class="img-responsive"}
 
-So with this chart we can now scan the data and see if we have constant variance. We see that there is some differences in variance. With our balanced designed (same number of samples per treatment) this does not cause a large effect on our F test.
-With the last few tests showing some deviations from normality and a deviation from homogeneous variance it stresses the importance of having a balanced experiment and how having a balanced experiment helps minimize deviations so we can accurately interpret the experiment. 
+So with this chart we see that there are some differences in variance. With our balanced designed (same number of samples per treatment) this does not cause a large effect on our F-test.
+An important point here is that the last few tests showed some deviations from normality and a deviation from homogeneous variance. We were able to continue with our test because of our balanced experiment. Having a balanced experiment helps minimize deviations so we can accurately interpret the experiment. 
 
 # Check for outliers
 
-Looking at our data in the predicted versus our residual chart we see some large deviations from set to set. Lets check and see if they are outliers. 
+Looking at our data in the predicted vs. residual chart we see some large deviations from set to set. Lets check and see if they are outliers. 
 A simple check is by checking the standardized residuals:
 
-$$ d_{ij} = \frac{e_ij}{\sqrt{MSE}} $$
+$$ d_{ij} = \frac{e_{ij}}{\sqrt{MSE}} $$
 
-where $$e_ij$$ is our residual, $$MSE$$ is our mean squared error calculated previously. This equation normalizes our residuals and most of the data (~95%) should fall within $$\pm$$2 from our mean. Anything greater than 3 is a potential outlier.
+where $$e_{ij}$$ is our residual, and $$MSE$$ is our mean squared error calculated previously. This equation normalizes our residuals and most of the data (~95%) should fall within $$\pm$$2 from our mean. Anything greater than 3 is a potential outlier.
 
 {% highlight python %}
 def check_outliers(residuals, mean_square_error):
@@ -127,11 +127,11 @@ check_outliers(cvd_pivot_residuals_melted, MSE)
 
 ![Plot predicted vs. resiudals](/images/Build-model-and-check/outliers.png){:class="img-responsive"}
 
-From this data we see that all of our data falls within 95% of our normal distribution of data and gives us no cause for concer. 
+From this data we see that all of our data falls within 95% of our normal distribution of data and gives us no cause for concern. 
 
 
 # Conclusions
 
 We have successfully created a model and checked that we did not violate any of our assumptions we made in the previous post. We saw that our data was approximately normal, but did have some non-homogenous variance. 
-Because we have a balanced data set we realized that our F test would not be dramatically affected. We also test our data for outliers and came to the conclusion that were none. 
+Because we have a balanced data set we realized that our F-test would not be dramatically affected. We also tested our data for outliers and came to the conclusion that were none. 
 
