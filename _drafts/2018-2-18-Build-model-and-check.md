@@ -4,8 +4,8 @@ title: First Post
 
 ---
 
-We left **Insert link to previous here** off from on the last post after performing an ANOVA statistical test and showing that these is a difference between treatments. 
-Our next steps are to build a model and then check the model
+We left off from on the [last post](http://www.robahall.com/Performing-ANOVA-Analysis/) after performing an ANOVA statistical test and showing that these is a difference between treatments. 
+Our next steps are to build a model and then check our model and assumption we previously made are correct. 
 
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
