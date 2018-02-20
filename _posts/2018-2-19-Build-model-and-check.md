@@ -34,7 +34,7 @@ We can now create our model:
 $$ \hat{y_{ij}} = \hat{\mu} + \hat{\tau_{i}} $$
 
 {% highlight python %}
-y_hat = yi_avg 
+y_hat = yi_avg.copy()
 y_hat
 {% endhighlight %}
 
