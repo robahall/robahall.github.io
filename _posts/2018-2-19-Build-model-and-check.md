@@ -31,6 +31,8 @@ From my previous post we had created a dataframe, yi_avg, which was the average 
 Tip: Anything you see with a hat over a variable means that it is an estimator.
 We can now create our model:
 
+$$ \hat{y_{ij}} = \hat{\mu} + \hat{\tau_{i}} $$
+
 {% highlight python %}
 y_hat = yi_avg 
 y_hat
@@ -42,7 +44,9 @@ Great! Now we have a simple model using Power to predict our outcome variable, y
 
 # Computing residuals
 
-To calculate our residuals, we need to subtract our model from our actual values. 
+To calculate our residuals, we need to subtract our model from our actual values:
+
+$$ e_{ij} = y_{ij}-\hat{y_{ij}} $$
 
 {% highlight python %}
 cvd_pivot_residuals = cvd_pivot.sub(y_hat, axis = 1)
