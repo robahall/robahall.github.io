@@ -18,7 +18,7 @@ avatar: https://avatars0.githubusercontent.com/u/13205851?v=3&s=460
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: hisnamewas@gmail.com
+  email: robahall2@gmail.com
   facebook:
   flickr:
   github: robahall
@@ -73,7 +73,7 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
