@@ -3,3 +3,5 @@ The second is there seems to be a lack of blogs specifically related to setting 
 It will walkthrough many aspects and include optimizations and minimizing costs. Things most blogs hand wave over including setting up VPC and ensuring security will be covered. Older topics I had previously discussed
 such as statistics and time series data will be kept and occasionally new content will be added. 
 
+Currently working on transitioning the front end to be more user friendly. Expect significant updates Oct 2019!
+
